@@ -22,7 +22,7 @@
       "matches": [
         "*://*.leetcode.com/*",
         "*://*.leetcode-cn.com/*",
-        "*"
+        "*://*."
       ],
       "all_frames": false
     }
