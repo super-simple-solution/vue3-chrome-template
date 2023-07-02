@@ -20,8 +20,6 @@
       ],
       "run_at": "document_idle",
       "matches": [
-        "*://*.leetcode.com/*",
-        "*://*.leetcode-cn.com/*",
         "*://*."
       ],
       "all_frames": false
