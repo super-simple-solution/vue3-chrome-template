@@ -3,6 +3,7 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import { crx } from '@crxjs/vite-plugin'
 import Components from 'unplugin-vue-components/vite'
+import zipPack from 'vite-plugin-zip-pack'
 import { AntDesignVueResolver } from 'unplugin-vue-components/resolvers'
 import AutoImport from 'unplugin-auto-import/vite'
 import eslintPlugin from 'vite-plugin-eslint'
@@ -22,8 +23,7 @@ export default defineConfig({
   },
   plugins: [
     // visualizer(),
-    vue(),
-    crx({ manifest }),
+    vue(), crx({ manifest }), zipPack({ outDir: './' }),
     Components({
       resolvers: [AntDesignVueResolver()],
       dts: true,
@@ -39,10 +39,7 @@ export default defineConfig({
         /\.md$/, // .md
       ],
       // global imports to register
-      imports: [
-        // presets
-        'vue',
-      ],
+      imports: [ 'vue'],
       eslintrc: {
         enabled: true, // Default `false`
         filepath: './.eslintrc-auto-import.json', // Default `./.eslintrc-auto-import.json`

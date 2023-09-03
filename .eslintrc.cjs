@@ -36,8 +36,7 @@ module.exports = {
         bracketSpacing: true, // 对象字面量的大括号间使用空格（默认true）
         eslintIntegration: true,
         printWidth: 120, // 每行代码长度（默认80）
-        endOfLine: 'auto',
-        plugins: [require('prettier-plugin-tailwindcss')],
+        endOfLine: 'auto'
       },
     ],
     '@typescript-eslint/no-empty-interface': [
